@@ -1,0 +1,7 @@
+{
+  "name": "url-shortener-api",
+  "version": 2,
+  "env": {
+    "DB_URI": "@url-shortener-db-uri"
+  }
+}
