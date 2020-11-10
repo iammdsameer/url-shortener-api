@@ -17,5 +17,5 @@ module.exports = async (req, res) => {
   await collection.insertOne(schema)
   res
     .status(201)
-    .send({ alias: `${process.env.CLIENT_URL}/api/${schema.short}` })
+    .send({ alias: `${process.env.CLIENT_URL}/api/alias/${schema.short}` })
 }
