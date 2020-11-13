@@ -6,8 +6,8 @@ module.exports = async (req, res) => {
   const result = await collection.findOne({ short: req.query.s })
   let clicks = result.clicks + 1
   await collection.findOneAndUpdate(
-    { short: req.query.s },
-    { $set: { clicks } },
+    { "short": req.query.s },
+    { $set: { "clicks": clicks } },
     { upsert: true }
   )
   res.redirect(result.long)
